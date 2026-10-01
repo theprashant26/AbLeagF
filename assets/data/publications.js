@@ -21,7 +21,7 @@ AIL.publications = [
   {
     sample: true,
     type: "newsletter",
-    title: "Ab Initio Legal Newsletter — September 2025",
+    title: "Ab Initio Legal LLP Newsletter — September 2025",
     date: "2025-09-15",
     summary: "Monthly round-up of key judgments of the Supreme Court and Delhi High Court, insolvency updates and regulatory developments.",
     tags: ["Supreme Court", "IBC", "Regulatory"],
@@ -39,7 +39,7 @@ AIL.publications = [
   {
     sample: true,
     type: "newsletter",
-    title: "Ab Initio Legal Newsletter — August 2025",
+    title: "Ab Initio Legal LLP Newsletter — August 2025",
     date: "2025-08-10",
     summary: "Developments in arbitration law, enforcement of arbitral awards and recent NCLT/NCLAT rulings on Section 7 applications.",
     tags: ["Arbitration", "NCLT"],
@@ -57,7 +57,7 @@ AIL.publications = [
   {
     sample: true,
     type: "newsletter",
-    title: "Ab Initio Legal Newsletter — July 2025",
+    title: "Ab Initio Legal LLP Newsletter — July 2025",
     date: "2025-07-08",
     summary: "Commercial Courts Act practice directions, RERA developments and key consumer-law decisions.",
     tags: ["Commercial Courts", "RERA"],

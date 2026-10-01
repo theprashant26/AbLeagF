@@ -44,7 +44,8 @@ Shared header, footer, disclaimer pop-up and WhatsApp button are rendered by `as
 ## Notes for the backend developer
 - Forms (`contact.html`, `careers.html`, newsletter subscribe on `publications.html` and in the footer) validate on the front-end and show a success state. Each `<form>` has a `data-endpoint` attribute (`/api/contact`, `/api/careers/apply`, `/api/newsletter/subscribe`); wire the POST in `initForms()` in `assets/js/main.js` (search for `BACKEND HOOK`).
 - `publications.js` / `site-data.js` can be replaced by API responses with the same shape.
-- Disclaimer acceptance is stored in `localStorage` (`ail_disclaimer_accepted`) and requested again after 24 hours (`DISC_DAYS` in `main.js`).
+- Disclaimer appears every time the website is opened (new tab or new visit); acceptance is kept in `sessionStorage` (`ail_disclaimer_accepted`) only while the visitor moves between pages.
+- Office cities are in `AIL.firm.offices` in `site-data.js`; each team member has a `practiceAreas` list.
 - The pen cursor (from the logo) is set in `assets/css/style.css` (`--cursor`, `--cursor-link`).
 
 ## Pending from the firm

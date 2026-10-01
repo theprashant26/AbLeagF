@@ -23,6 +23,13 @@ AIL.firm = {
   formEmail: "communications@abinitiolegal.in",
   address: ["1010 / 1011-B, Indraprakash Building,", "21, Barakhamba Road,", "New Delhi – 110001"],
   mapQuery: "Indraprakash Building, 21 Barakhamba Road, New Delhi 110001",
+  // Pan-India presence. >>> Associate-office cities to be CONFIRMED by the firm <<<
+  offices: [
+    { city: "New Delhi", label: "Head Office", hq: true, address: "1010 / 1011-B, Indraprakash Building, 21, Barakhamba Road, New Delhi – 110001" },
+    { city: "Mumbai", label: "Associate Office" },
+    { city: "Chennai", label: "Associate Office" },
+    { city: "Chandigarh", label: "Associate Office" }
+  ],
   website: "www.abinitiolegal.in",
   social: {
     linkedin: "https://in.linkedin.com/company/ab-initio-legal-llp"
@@ -32,6 +39,7 @@ AIL.firm = {
 
 /* ---------- OUR TEAM ----------
    linkedin: paste each member's LinkedIn profile URL.
+   practiceAreas: shown on partner cards and in the profile pop-up.
    Photos live in assets/img/team/ (portrait, 4:5 ratio works best). */
 AIL.team = [
   {
@@ -42,12 +50,13 @@ AIL.team = [
     group: "partners",
     photo: "assets/img/team/amit-manchanda.jpg",
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Amit%20Manchanda%20Ab%20Initio",
+    practiceAreas: ["Commercial & Corporate Litigation", "International & Domestic Arbitration", "Insolvency (IBC)", "Contractual Disputes", "Banking & Finance"],
     focus: ["Corporate & Regulatory", "Arbitration", "IPR", "Corporate Governance"],
     bio: [
-      "Mr. Amit Manchanda is the Founding Partner of Ab Initio Legal and brings over 21 years of extensive in-house experience, having served in leadership roles with one of India's largest listed organisations. His expertise spans Company Secretarial functions, Arbitration, Intellectual Property Rights (IPR), Corporate Governance, Strategic Decision-making and Regulatory Compliance.",
+      "Mr. Amit Manchanda is the Founding Partner of Ab Initio Legal LLP and brings over 21 years of extensive in-house experience, having served in leadership roles with one of India's largest listed organisations. His expertise spans Company Secretarial functions, Arbitration, Intellectual Property Rights (IPR), Corporate Governance, Strategic Decision-making and Regulatory Compliance.",
       "He has a proven track record of handling complex litigation, corporate laws, and matters involving restructuring, corporate schemes, mergers, joint ventures, takeovers and financial instruments. Mr. Manchanda has worked closely with tier-1 law firms and Advocates, further enhancing his ability to navigate intricate legal and regulatory landscapes.",
       "His proficiency includes advising on RBI notices, FEMA and FDI compliances, foreign litigation, ROC/RD/MCA/ED investigations, brand protection and Commercial Arbitration. He has also managed IBC matters, National Green Tribunal cases, and a wide range of other Corporate and Compliance-related issues.",
-      "Mr. Manchanda is well-versed in boardroom functions, shareholder meetings and NCLT procedures. Before founding Ab Initio Legal, he held the position of Group Head – Legal and Secretarial at Radico Khaitan Limited, where he was instrumental in managing legal and regulatory affairs at the highest level."
+      "Mr. Manchanda is well-versed in boardroom functions, shareholder meetings and NCLT procedures. Before founding Ab Initio Legal LLP, he held the position of Group Head – Legal and Secretarial at Radico Khaitan Limited, where he was instrumental in managing legal and regulatory affairs at the highest level."
     ]
   },
   {
@@ -59,6 +68,7 @@ AIL.team = [
     group: "partners",
     photo: "assets/img/team/abhay-chitravanshi.jpg",
     linkedin: "https://www.linkedin.com/in/abhay-chitravanshi-4028a8137/",
+    practiceAreas: ["Commercial & Corporate Litigation", "Insolvency (IBC)", "International & Domestic Arbitration", "Criminal & White-Collar Crimes", "Constitutional Matters", "Consumer Disputes", "Labour, Industrial & Employment", "Trusts, Estate & Family Planning"],
     focus: ["Commercial & Insolvency", "Arbitration", "PMLA & POCA", "Constitutional"],
     bio: [
       "Mr. Abhay Chitravanshi is a seasoned legal practitioner with seven years of extensive litigation experience, heading the litigation practice of the firm. An alumnus of Campus Law Centre (CLC), University of Delhi, he graduated with a First Division.",
@@ -75,6 +85,7 @@ AIL.team = [
     group: "associates",
     photo: "assets/img/team/deepak-shankar.jpg",
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Deepak%20Shankar%20Ab%20Initio%20Legal",
+    practiceAreas: ["Labour, Industrial & Employment", "Criminal & White-Collar Crimes", "Consumer Disputes", "International & Domestic Arbitration"],
     focus: ["Labour & Industrial", "Criminal Law", "NI Act", "Consumer"],
     bio: [
       "Mr. Deepak Shankar is a law graduate from Shimla University with over six years of experience in litigation and contracting. He represents clients on a wide range of legal matters in various District Courts, Labour Courts and Industrial Tribunals.",
@@ -89,6 +100,7 @@ AIL.team = [
     group: "associates",
     photo: "assets/img/team/bhawna-nanda.jpg",
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Bhawna%20Nanda%20Ab%20Initio%20Legal",
+    practiceAreas: ["Banking & Finance", "Commercial & Corporate Litigation", "Family & Matrimonial", "Property & RERA", "Consumer Disputes"],
     focus: ["Recovery", "Commercial Suits", "Family Law", "RERA & DRT"],
     bio: [
       "Ms. Bhawna Nanda is a hardworking civil litigator with experience in Recovery Matters, Family Disputes and Commercial Suits. She has appeared before the District Courts, the Delhi High Court and specialised tribunals such as the NCDRC, RERA, the Debt Recovery Tribunal (DRT) and the Debt Recovery Appellate Tribunal (DRAT).",
@@ -103,6 +115,7 @@ AIL.team = [
     group: "associates",
     photo: "assets/img/team/riya-goel.jpg",
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Riya%20Goel%20Ab%20Initio%20Legal",
+    practiceAreas: ["Commercial & Corporate Litigation", "International & Domestic Arbitration", "Dispute Resolution"],
     focus: ["Commercial Litigation", "Arbitration", "Mediation & ADR"],
     bio: [
       "Ms. Riya Goel specialises in Commercial Litigation and Alternative Dispute Resolution. She brings a balanced combination of strategic insight and meticulous execution, assisting clients in navigating complex commercial disputes with clarity and efficiency.",
@@ -117,6 +130,7 @@ AIL.team = [
     group: "advisors",
     photo: "assets/img/team/narender-gupta.jpg",
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Narender%20Gupta%20FCS",
+    practiceAreas: ["Commercial & Corporate Litigation", "Dispute Resolution", "Contractual Disputes"],
     focus: ["Corporate Governance", "Public Policy", "Regulatory Affairs"],
     bio: [
       "Mr. Narender Gupta is a distinguished professional with over 35 years of experience. A graduate in Commerce and Law with a post-graduate qualification in Business Management, he is a Fellow Member of the Institute of Company Secretaries of India. His expertise spans Manufacturing, Engineering, Real Estate, Telecom, Broadcasting, Entertainment and Services.",
@@ -131,6 +145,7 @@ AIL.team = [
     group: "advisors",
     photo: "assets/img/team/ateev-kapoor.jpg",
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Ateev%20Kapoor",
+    practiceAreas: ["Commercial & Corporate Litigation", "Dispute Resolution", "Contractual Disputes"],
     focus: ["Strategy", "Corporate Affairs", "Business Advocacy"],
     bio: [
       "Mr. Ateev Kapoor is a seasoned professional with over 16 years of post-qualification experience and holds an MBA from Cardiff University, UK. His expertise includes strategic assignments, corporate affairs, business advocacy and client relationship management.",

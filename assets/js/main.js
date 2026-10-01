@@ -102,7 +102,7 @@
           ${m.practice ? `<div class="lead-card__practice">${esc(m.practice)}</div>` : ""}
           <div class="team-card__qual">${esc(m.qualifications)}</div>
           <p class="lead-card__excerpt">${esc(excerpt(m))}</p>
-          <div class="lead-card__tags">${(m.focus || []).slice(0, 4).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+          ${(m.practiceAreas || []).length ? `<div class="lead-card__areas"><span>Practice Areas</span>${m.practiceAreas.slice(0, 4).map(esc).join(" · ")}${m.practiceAreas.length > 4 ? " · …" : ""}</div>` : ""}
           <div class="lead-card__actions">
             <span class="link-arrow">View Profile <i class="bi bi-arrow-right"></i></span>
             <a class="li-btn" href="${esc(m.linkedin)}" target="_blank" rel="noopener" aria-label="${esc(m.name)} on LinkedIn" data-stop><i class="bi bi-linkedin"></i></a>
@@ -133,11 +133,18 @@
       $("#profileModal .row").innerHTML = `
         <div class="col-md-5"><div class="profile-img" style="background-image:url('${esc(m.photo)}')" role="img" aria-label="${esc(m.name)}"></div></div>
         <div class="col-md-7"><div class="profile-body">
-          <div class="team-card__role">${esc(m.designation)}${m.practice ? " · " + esc(m.practice) : ""}</div>
+          <div class="team-card__role">${esc(AIL.firm.name)}</div>
           <h3>${esc(m.name)}</h3>
-          <div class="team-card__qual">${esc(m.qualifications)}</div>
-          <div class="tags">${(m.focus || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+          <dl class="profile-facts">
+            <dt>Designation</dt><dd>${esc(m.designation)}${m.practice ? ` — ${esc(m.practice)}` : ""}</dd>
+            <dt>Qualifications</dt><dd>${esc(m.qualifications)}</dd>
+            ${(m.practiceAreas || []).length ? `<dt>Practice Areas</dt><dd>${m.practiceAreas.map(esc).join("; ")}</dd>` : ""}
+            <dt>Email</dt><dd><a href="mailto:${esc(AIL.firm.emails[0])}">${esc(AIL.firm.emails[0])}</a></dd>
+            <dt>LinkedIn</dt><dd><a href="${esc(m.linkedin)}" target="_blank" rel="noopener">View profile</a></dd>
+          </dl>
+          <h4 class="profile-subhead">Profile</h4>
           ${m.bio.map((p) => `<p>${esc(p)}</p>`).join("")}
+          ${(m.focus || []).length ? `<h4 class="profile-subhead">Areas of Focus</h4><ul class="focus-list">${m.focus.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
           <div class="d-flex flex-wrap gap-3 mt-4">
             <a class="btn-ail" href="${esc(m.linkedin)}" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> Connect on LinkedIn</a>
             <a class="btn-ail btn-dark-outline" href="contact.html">Get in Touch</a>
@@ -183,6 +190,19 @@
     }
   }
 
+  // ---- Offices (Pan-India presence) ----
+  function renderOffices() {
+    $$("[data-offices]").forEach((el) => {
+      el.innerHTML = (AIL.firm.offices || []).map((o) => `
+        <div class="office-card${o.hq ? " is-hq" : ""}" data-stagger-item>
+          <i class="bi bi-geo-alt"></i>
+          <div class="office-card__label">${esc(o.label)}</div>
+          <h3>${esc(o.city)}</h3>
+          <p>${esc(o.address || "Associate office")}</p>
+        </div>`).join("");
+    });
+  }
+
   // ---- Forums marquee ----
   function renderForums() {
     const el = $("#forumsMarquee");
@@ -207,7 +227,7 @@
           ${p.sample ? '<span class="sample-flag">Sample</span>' : ""}
           <span class="type">${esc(TYPE_LABEL[p.type] || p.type)}</span>
           <span class="cover-title">${coverDate(p.date)}</span>
-          <span class="cover-date">Ab Initio Legal · ${esc((p.tags || [])[0] || "Insights")}</span>
+          <span class="cover-date">Ab Initio Legal LLP · ${esc((p.tags || [])[0] || "Insights")}</span>
         </div>
         <div class="pub-body">
           <div class="pub-date">${fmtDate(p.date)}</div>
@@ -387,10 +407,11 @@
   }
 
   // ---- Disclaimer (Agree / Disagree) ----
+  // Shown every time the website is opened (new tab / new visit); not repeated while
+  // the visitor moves between pages in the same visit.
   const DISC_KEY = "ail_disclaimer_accepted";
-  const DISC_DAYS = 1; // ask again after 24 hours
   function disclaimerAccepted() {
-    try { const v = +localStorage.getItem(DISC_KEY); return v && Date.now() - v < DISC_DAYS * 864e5; } catch (e) { return false; }
+    try { return sessionStorage.getItem(DISC_KEY) === "1"; } catch (e) { return false; }
   }
   function initDisclaimer(onDone) {
     const d = $("#disclaimer");
@@ -400,7 +421,7 @@
     if (animate) gsap.fromTo(".disclaimer__box", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .9, ease: "power4.out" });
     setTimeout(() => $("#discAgree").focus(), 300);
     $("#discAgree").addEventListener("click", () => {
-      try { localStorage.setItem(DISC_KEY, String(Date.now())); } catch (e) {}
+      try { sessionStorage.setItem(DISC_KEY, "1"); } catch (e) {}
       const close = () => { d.classList.remove("show"); lockScroll("disclaimer", false); onDone && onDone(); };
       animate ? gsap.to(d, { opacity: 0, duration: .5, onComplete: () => { close(); gsap.set(d, { opacity: 1 }); } }) : close();
     });
@@ -667,7 +688,7 @@
       gsap.fromTo($(".hero__img", s), { scale: 1.16 }, { scale: 1, duration: DURATION + 2, ease: "none" });
       gsap.fromTo($(".hero__label", s), { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: .2 });
       gsap.fromTo(words, { yPercent: 115 }, { yPercent: 0, duration: 1.2, ease: "power4.out", stagger: .06, delay: .3 });
-      gsap.fromTo($$(".hero__text, .hero__actions", s), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1, ease: "power3.out", stagger: .12, delay: .8 });
+      gsap.fromTo($$(".hero__tagline, .hero__text, .hero__actions", s), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1, ease: "power3.out", stagger: .12, delay: .8 });
     };
     const progress = (i) => {
       dots.forEach((d, k) => d.classList.toggle("is-active", k === i));
@@ -746,6 +767,7 @@
     renderTeam();
     renderClients();
     renderForums();
+    renderOffices();
     renderDrafting();
     renderLatestPubs();
     renderPublicationsPage();

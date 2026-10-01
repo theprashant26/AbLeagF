@@ -12,7 +12,7 @@
     <div class="topbar">
       <div class="container-xl">
         <ul class="topbar__list">
-          <li><i class="bi bi-geo-alt"></i>Barakhamba Road, New Delhi</li>
+          <li><i class="bi bi-geo-alt"></i>New Delhi · Pan-India Presence</li>
           <li class="d-none d-lg-block"><i class="bi bi-envelope"></i><a href="mailto:${F.emails[0]}">${F.emails[0]}</a></li>
         </ul>
         <ul class="topbar__list">
@@ -23,8 +23,8 @@
     </div>
     <header class="site-header" id="siteHeader">
       <div class="container-xl">
-        <a class="brand" href="index.html" aria-label="Ab Initio Legal — Home">
-          <img src="assets/img/brand/logo-light.png" alt="Ab Initio Legal — Advocates &amp; Solicitors" width="240" height="68">
+        <a class="brand" href="index.html" aria-label="Ab Initio Legal LLP — Home">
+          <img src="assets/img/brand/logo-light.png" alt="Ab Initio Legal LLP — Advocates &amp; Solicitors" width="240" height="68">
         </a>
         <nav aria-label="Main">
           <ul class="main-nav">
@@ -75,7 +75,7 @@
         <div class="container-xl">
           <div class="row g-5">
             <div class="col-lg-4">
-              <img class="footer-logo" src="assets/img/brand/logo-light.png" alt="Ab Initio Legal" loading="lazy">
+              <img class="footer-logo" src="assets/img/brand/logo-light.png" alt="Ab Initio Legal LLP" loading="lazy">
               <p>A full-service, litigation-driven law firm established in ${F.established}, representing corporates, financial institutions and individuals before courts and tribunals across India.</p>
               <div class="footer-social">
                 <a href="${F.social.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -106,7 +106,9 @@
             </div>
             <div class="col-md-4 col-lg-4">
               <h5>Reach Us</h5>
+              <p class="mb-1 text-white footer-firm">${F.name}</p>
               <p class="mb-2">${F.address.join(" ")}</p>
+              <p class="mb-2 footer-offices"><i class="bi bi-geo-alt"></i> ${(F.offices || []).map((o) => o.city + (o.hq ? " (Head Office)" : "")).join(" · ")}</p>
               <p class="mb-1"><a class="text-white" href="tel:${F.phoneHref}">${F.phone}</a> &nbsp;/&nbsp; <a class="text-white" href="tel:${F.mobileHref}">${F.mobile}</a></p>
               <p class="mb-4"><a class="text-white" href="mailto:${F.emails[0]}">${F.emails[0]}</a></p>
               <h5 class="mb-2">Newsletter</h5>
@@ -119,7 +121,7 @@
           </div>
         </div>
       </div>
-      <p class="footer-big" aria-hidden="true">Ab Initio Legal</p>
+      <p class="footer-big" aria-hidden="true">Ab Initio Legal LLP</p>
       <div class="footer-bottom">
         <div class="container-xl">
           <span>© ${year} ${F.name}. All rights reserved.</span>
@@ -142,17 +144,18 @@
     <div class="disclaimer" id="disclaimer" role="dialog" aria-modal="true" aria-labelledby="discTitle">
       <div class="disclaimer__box">
         <div class="disclaimer__head">
-          <img src="assets/img/brand/mark-dark.png" alt="">
-          <div><small>Bar Council of India Rules</small><h2 id="discTitle">Disclaimer</h2></div>
+          <img src="assets/img/brand/logo-dark.png" alt="Ab Initio Legal LLP — Advocates &amp; Solicitors">
+          <h2 id="discTitle">Disclaimer</h2>
+          <small>As per the Rules of the Bar Council of India</small>
         </div>
         <div class="disclaimer__body">
           <p>The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website, <strong>${F.website}</strong>, you acknowledge and confirm that:</p>
           <ul>
-            <li>You are seeking information relating to ${F.name} (“Ab Initio Legal”) of your own accord and there has been no form of solicitation, advertisement, personal communication, invitation or inducement of any sort whatsoever from Ab Initio Legal or any of its members to solicit any work through this website.</li>
+            <li>You are seeking information relating to ${F.name} of your own accord and there has been no form of solicitation, advertisement, personal communication, invitation or inducement of any sort whatsoever from Ab Initio Legal LLP or any of its members to solicit any work through this website.</li>
             <li>The information on this website is provided solely for informational purposes and should not be construed as legal advice or an opinion. It does not create an advocate–client relationship.</li>
-            <li>Ab Initio Legal shall not be liable for any consequence of any action taken by you relying on the material or information provided on this website. You should seek independent legal advice for your specific situation.</li>
+            <li>Ab Initio Legal LLP shall not be liable for any consequence of any action taken by you relying on the material or information provided on this website. You should seek independent legal advice for your specific situation.</li>
             <li>Any information you share with us through this website will not be treated as confidential until an advocate–client relationship is formally established.</li>
-            <li>The contents of this website, including text, logos and graphics, are the intellectual property of Ab Initio Legal.</li>
+            <li>The contents of this website, including text, logos and graphics, are the intellectual property of Ab Initio Legal LLP.</li>
           </ul>
           <p class="mb-0">If you have any questions, please write to <a href="mailto:${F.emails[0]}">${F.emails[0]}</a>.</p>
         </div>
