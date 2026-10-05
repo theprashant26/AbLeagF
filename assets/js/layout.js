@@ -62,7 +62,7 @@
         <li><a class="${act("contact").trim()}" href="contact.html">Connect With Us</a></li>
       </ul>
       <div class="mobile-nav__foot">
-        <p class="mb-1"><a href="tel:${F.phoneHref}">${F.phone}</a> &nbsp;·&nbsp; <a href="tel:${F.mobileHref}">${F.mobile}</a></p>
+        <p class="mb-1"><a href="tel:${F.phoneHref}">${F.phone}</a></p>
         <p class="mb-1"><a href="mailto:${F.emails[0]}">${F.emails[0]}</a></p>
         <p><a href="${F.social.linkedin}" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> Follow us on LinkedIn</a></p>
       </div>
@@ -80,7 +80,6 @@
               <div class="footer-social">
                 <a href="${F.social.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                 <a href="mailto:${F.emails[0]}" aria-label="Email"><i class="bi bi-envelope"></i></a>
-                <a href="https://wa.me/${F.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
                 <a href="tel:${F.phoneHref}" aria-label="Call"><i class="bi bi-telephone"></i></a>
               </div>
             </div>
@@ -109,7 +108,7 @@
               <p class="mb-1 text-white footer-firm">${F.name}</p>
               <p class="mb-2">${F.address.join(" ")}</p>
               <p class="mb-2 footer-offices"><i class="bi bi-geo-alt"></i> ${(F.offices || []).map((o) => o.city + (o.hq ? " (Head Office)" : "")).join(" · ")}</p>
-              <p class="mb-1"><a class="text-white" href="tel:${F.phoneHref}">${F.phone}</a> &nbsp;/&nbsp; <a class="text-white" href="tel:${F.mobileHref}">${F.mobile}</a></p>
+              <p class="mb-1"><a class="text-white" href="tel:${F.phoneHref}">${F.phone}</a></p>
               <p class="mb-4"><a class="text-white" href="mailto:${F.emails[0]}">${F.emails[0]}</a></p>
               <h5 class="mb-2">Newsletter</h5>
               <form class="footer-sub" id="footerSub" novalidate>
@@ -139,12 +138,11 @@
           <span><a href="disclaimer.html">Disclaimer</a> &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a></span>
         </div>
         <div class="container-xl mt-3">
-          <p class="footer-note mb-0">As per the rules of the Bar Council of India, law firms are not permitted to solicit work or advertise. This website is meant only to provide information about the firm and does not constitute legal advice or an invitation to create an advocate–client relationship. Court photographs: Supreme Court of India — Wikimedia Commons (CC BY-SA 4.0); High Court of Delhi — official photo gallery.</p>
+          <p class="footer-note mb-0">As per the rules of the Bar Council of India, law firms are not permitted to solicit work or advertise. This website is meant only to provide information about the firm and does not constitute legal advice or an invitation to create an advocate–client relationship.</p>
         </div>
       </div>
     </footer>
     <div class="fab-stack">
-      <a class="fab fab-wa" href="https://wa.me/${F.whatsapp}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
       <button class="fab fab-top" id="toTop" aria-label="Back to top">
         <svg viewBox="0 0 56 56" width="56" height="56"><circle cx="28" cy="28" r="27" stroke-dasharray="169.6" stroke-dashoffset="169.6" id="toTopRing"/></svg>
         <i class="bi bi-arrow-up"></i>
