@@ -18,17 +18,23 @@ AIL.firm = {
   mobile: "+91-8800808022",
   mobileHref: "+918800808022",
   whatsapp: "918800808022",
-  emails: ["communications@abinitiolegal.in", "mail@abinitioindia.com"],
+  emails: ["communications@abinitiolegal.in"],
   // Form submissions (contact, careers, newsletter sign-up) are delivered here
   formEmail: "communications@abinitiolegal.in",
-  address: ["1010 / 1011-B, Indraprakash Building,", "21, Barakhamba Road,", "New Delhi – 110001"],
-  mapQuery: "Indraprakash Building, 21 Barakhamba Road, New Delhi 110001",
-  // Pan-India presence. >>> Associate-office cities to be CONFIRMED by the firm <<<
+  // CVs and job applications
+  careersEmail: "careers@abinitiolegal.in",
+  hours: "Monday – Saturday, 10:00 am – 7:30 pm",
+  address: ["1010, 10th Floor, Indra Prakash Building,", "21, Barakhamba Road, Connaught Place,", "New Delhi, Delhi – 110001"],
+  mapQuery: "Ab Initio Legal LLP, Indra Prakash Building, 21 Barakhamba Road, Connaught Place, New Delhi 110001",
+  mapLink: "https://maps.app.goo.gl/CY8NVoUuybGFuwaP8",
+  // Pan-India presence: head office and associate offices
   offices: [
-    { city: "New Delhi", label: "Head Office", hq: true, address: "1010 / 1011-B, Indraprakash Building, 21, Barakhamba Road, New Delhi – 110001" },
-    { city: "Mumbai", label: "Associate Office" },
-    { city: "Chennai", label: "Associate Office" },
-    { city: "Chandigarh", label: "Associate Office" }
+    {city: "New Delhi", label: "Head Office", hq: true, address: "1010, 10th Floor, Indra Prakash Building, 21, Barakhamba Road, Connaught Place, New Delhi, Delhi – 110001"},
+    {city: "Delhi High Court", label: "Associate Office", address: "Chamber No. 395, Lawyers Block-II, Delhi High Court, Sher Shah Road, New Delhi – 110003"},
+    {city: "Gurugram", label: "Associate Office", address: "Unit No. 1003, 10th Floor, Tower-D, Vatika Light House at Vatika Town Square, Sector 82-A, Gurugram – 122004"},
+    {city: "Mumbai", label: "Associate Office", address: "Office No. 19/A, 134 Birla Mansion, Blaze Business Center, 1st Floor, Next to Commerce House, Nagindas Master Road, Fort, Mumbai – 400001"},
+    {city: "Chennai", label: "Associate Office", address: "Flat #3B, III Floor, Shruthi Building, Shruthi Laya Apartments, Plot #135, 2nd Main Road, Gandhi Nagar, Adyar, Chennai – 600020"},
+    {city: "Kolkata", label: "Associate Office", address: "15 G, Free School Street, Esplanade, Taltala, Kolkata, West Bengal – 700016"}
   ],
   website: "www.abinitiolegal.in",
   social: {
@@ -38,7 +44,7 @@ AIL.firm = {
 };
 
 /* ---------- OUR TEAM ----------
-   linkedin: paste each member's LinkedIn profile URL.
+   linkedin: paste each member's LinkedIn profile URL (leave "" if the person is not on LinkedIn).
    practiceAreas: shown on partner cards and in the profile pop-up.
    Photos live in assets/img/team/ (portrait, 4:5 ratio works best). */
 AIL.team = [
@@ -49,7 +55,7 @@ AIL.team = [
     qualifications: "LLB, FCS, PGDBA",
     group: "partners",
     photo: "assets/img/team/amit-manchanda.jpg",
-    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Amit%20Manchanda%20Ab%20Initio",
+    linkedin: "https://www.linkedin.com/in/amit-mancchanda-15991419",
     practiceAreas: ["Commercial & Corporate Litigation", "International & Domestic Arbitration", "Insolvency (IBC)", "Contractual Disputes", "Banking & Finance"],
     focus: ["Corporate & Regulatory", "Arbitration", "IPR", "Corporate Governance"],
     bio: [
@@ -67,12 +73,12 @@ AIL.team = [
     qualifications: "Campus Law Centre, University of Delhi",
     group: "partners",
     photo: "assets/img/team/abhay-chitravanshi.jpg",
-    linkedin: "https://www.linkedin.com/in/abhay-chitravanshi-4028a8137/",
+    linkedin: "https://www.linkedin.com/in/abhay-chitravanshi-4028a8137",
     practiceAreas: ["Commercial & Corporate Litigation", "Insolvency (IBC)", "International & Domestic Arbitration", "Criminal & White-Collar Crimes", "Constitutional Matters", "Consumer Disputes", "Labour, Industrial & Employment", "Trusts, Estate & Family Planning"],
-    focus: ["Commercial & Insolvency", "Arbitration", "PMLA & POCA", "Constitutional"],
+    focus: ["Commercial & Insolvency", "Arbitration", "PMLA & Prevention of Corruption Act", "Constitutional"],
     bio: [
       "Mr. Abhay Chitravanshi is a seasoned legal practitioner with seven years of extensive litigation experience, heading the litigation practice of the firm. An alumnus of Campus Law Centre (CLC), University of Delhi, he graduated with a First Division.",
-      "He regularly appears and has independently argued and secured consistent interim reliefs, final orders and judgments for the firm's clients before the Hon'ble Supreme Court of India, the Hon'ble High Court of Delhi and various judicial and quasi-judicial forums. His practice spans Commercial & Insolvency litigation, Arbitration (International and Domestic), Civil and Criminal Trials, as well as cases under the Prevention of Money Laundering Act (PMLA) and Prevention of Corruption Act (POCA). He also has substantial experience in Consumer & Service matters, POSH, Employment issues and other intricate disputes involving substantial questions of law.",
+      "He regularly appears and independently argues matters before the Hon’ble Supreme Court of India, the Hon’ble High Court of Delhi, and various judicial and quasi-judicial fora, representing clients across a wide range of complex disputes. He has successfully represented clients in obtaining interim reliefs, final orders and judgments. His practice encompasses Commercial and Insolvency Litigation, International and Domestic Arbitration, Civil and Criminal Trials, and proceedings under the Prevention of Money Laundering Act, 2002 (PMLA) and the Prevention of Corruption Act, 1988 (POCA). He also has substantial experience in Consumer and Service matters, Prevention of Sexual Harassment (POSH) matters, Employment-related disputes, and other complex disputes involving substantial questions of law.",
       "Mr. Chitravanshi has closely worked on Constitutional matters with his involvement in the landmark litigation concerning Marital Rape and Same-Sex Marriage before the Hon'ble Delhi High Court, the former of which is still pending adjudication before the Hon'ble Supreme Court. His expertise extends to cross-examinations in Arbitrations and Commercial Disputes, strategising in Criminal and White-Collar matters, and managing Property, Family Planning & Estates, Trusts and lease disputes.",
       "His career is further highlighted by his successful clearance of the JAG (Indian Army) SSB in 2019 and his selection as a Supreme Court Legal Researcher in 2023."
     ]
@@ -84,7 +90,7 @@ AIL.team = [
     qualifications: "LLB",
     group: "associates",
     photo: "assets/img/team/deepak-shankar.jpg",
-    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Deepak%20Shankar%20Ab%20Initio%20Legal",
+    linkedin: "https://www.linkedin.com/in/deepak-shankar-202885202",
     practiceAreas: ["Labour, Industrial & Employment", "Criminal & White-Collar Crimes", "Consumer Disputes", "International & Domestic Arbitration"],
     focus: ["Labour & Industrial", "Criminal Law", "NI Act", "Consumer"],
     bio: [
@@ -95,31 +101,16 @@ AIL.team = [
   {
     slug: "bhawna-nanda",
     name: "Bhawna Nanda",
-    designation: "Associate",
+    designation: "Senior Associate",
     qualifications: "B.A. LL.B. (Hons.), LL.M. (Constitutional Law)",
     group: "associates",
     photo: "assets/img/team/bhawna-nanda.jpg",
-    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Bhawna%20Nanda%20Ab%20Initio%20Legal",
+    linkedin: "https://www.linkedin.com/in/bhawna-nanda-703b99252",
     practiceAreas: ["Banking & Finance", "Commercial & Corporate Litigation", "Family & Matrimonial", "Property & RERA", "Consumer Disputes"],
     focus: ["Recovery", "Commercial Suits", "Family Law", "RERA & DRT"],
     bio: [
       "Ms. Bhawna Nanda is a hardworking civil litigator with experience in Recovery Matters, Family Disputes and Commercial Suits. She has appeared before the District Courts, the Delhi High Court and specialised tribunals such as the NCDRC, RERA, the Debt Recovery Tribunal (DRT) and the Debt Recovery Appellate Tribunal (DRAT).",
       "She has represented the firm's clients in Commercial Recovery Suits, Negotiable Instruments matters, Family Law and Property Disputes, as well as criminal matters. Ms. Nanda is adept at legal research, drafting and negotiation, and is known for her detailed approach and dedication to client service."
-    ]
-  },
-  {
-    slug: "riya-goel",
-    name: "Riya Goel",
-    designation: "Associate",
-    qualifications: "B.A. LL.B., LL.M. (Alternative Dispute Resolution)",
-    group: "associates",
-    photo: "assets/img/team/riya-goel.jpg",
-    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Riya%20Goel%20Ab%20Initio%20Legal",
-    practiceAreas: ["Commercial & Corporate Litigation", "International & Domestic Arbitration", "Dispute Resolution"],
-    focus: ["Commercial Litigation", "Arbitration", "Mediation & ADR"],
-    bio: [
-      "Ms. Riya Goel specialises in Commercial Litigation and Alternative Dispute Resolution. She brings a balanced combination of strategic insight and meticulous execution, assisting clients in navigating complex commercial disputes with clarity and efficiency.",
-      "Her work involves legal research, drafting, case management and active support in arbitration and litigation proceedings. With a strong inclination towards ADR, she guides clients toward efficient, commercially viable settlements and arbitral resolutions."
     ]
   },
   {
@@ -129,7 +120,7 @@ AIL.team = [
     qualifications: "LLB, FCS, PGDBM",
     group: "advisors",
     photo: "assets/img/team/narender-gupta.jpg",
-    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Narender%20Gupta%20FCS",
+    linkedin: "",
     practiceAreas: ["Commercial & Corporate Litigation", "Dispute Resolution", "Contractual Disputes"],
     focus: ["Corporate Governance", "Public Policy", "Regulatory Affairs"],
     bio: [
@@ -144,7 +135,7 @@ AIL.team = [
     qualifications: "MBA (Cardiff University, UK), LLB",
     group: "advisors",
     photo: "assets/img/team/ateev-kapoor.jpg",
-    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Ateev%20Kapoor",
+    linkedin: "https://www.linkedin.com/in/ateevkapoor",
     practiceAreas: ["Commercial & Corporate Litigation", "Dispute Resolution", "Contractual Disputes"],
     focus: ["Strategy", "Corporate Affairs", "Business Advocacy"],
     bio: [
@@ -156,30 +147,70 @@ AIL.team = [
 
 /* ---------- PRACTICE AREAS ---------- */
 AIL.practices = [
-  { icon: "bi-bank2", title: "Dispute Resolution", text: "An integrated approach to dispute resolution. We analyse the intricacies of each case and recommend the best-suited mechanism — litigation, arbitration or ADR — across commercial, contractual, employment and property conflicts, with cost-effective and time-sensitive solutions that minimise the impact on our clients' operations." },
-  { icon: "bi-buildings", title: "Commercial & Corporate Litigation", text: "Holistic support to corporations, start-ups and businesses — recovery suits, shareholder disagreements, contractual disputes and claims of oppression and mismanagement, together with corporate governance and regulatory compliance issues, and a proactive approach to pre-litigation mediation." },
-  { icon: "bi-house-door", title: "Civil Litigation", text: "Property conflicts, contractual disagreements, inheritance disputes and tort claims — end-to-end support from drafting pleadings to trials and appeals before District Courts, High Courts and the Supreme Court." },
-  { icon: "bi-globe2", title: "International & Domestic Arbitration", text: "Ad-hoc and institutional arbitrations (including DIAC) across construction, finance and technology — from drafting arbitration agreements to enforcing awards, with a strong emphasis on confidentiality and cost-efficiency." },
-  { icon: "bi-graph-down-arrow", title: "Insolvency (IBC)", text: "Representing creditors, debtors and resolution professionals in CIRP, liquidation and debt restructuring before the NCLT and NCLAT, in strict compliance with the timelines of the Insolvency and Bankruptcy Code." },
-  { icon: "bi-shield-lock", title: "Criminal & White-Collar Crimes", text: "Robust representation in fraud, corruption, money laundering (PMLA) and embezzlement matters — through investigations, trials and appeals — with defence strategies that also mitigate reputational risk, and support for internal corporate investigations." },
-  { icon: "bi-lightning-charge", title: "Injunctions & Interim Reliefs", text: "Urgent injunctions, stay orders and restraining orders across courts and tribunals — securing immediate protection while laying the foundation for favourable final outcomes." },
-  { icon: "bi-people", title: "Consumer Disputes", text: "Representing consumers and businesses before District Commissions, State Commissions and the NCDRC in matters of defective goods, deficient services, misleading advertisements and unfair trade practices." },
-  { icon: "bi-award", title: "SLPs before the Supreme Court", text: "Special Leave Petitions before the Hon'ble Supreme Court of India — constitutional challenges, statutory interpretation and appeals against orders of lower courts, backed by meticulous research, drafting and advocacy." },
-  { icon: "bi-file-earmark-text", title: "Contractual Disputes", text: "Breach of contract, enforcement of agreements and disputes over contractual terms — negotiating settlements and representing clients in litigation and arbitration with a balance of legal and commercial considerations." },
-  { icon: "bi-columns-gap", title: "Original Side (Delhi High Court)", text: "High-stakes commercial disputes and civil litigation on the Original Side of the Delhi High Court — injunctions, recovery suits, intellectual property disputes and more, from pleadings to trial and appeal." },
-  { icon: "bi-megaphone", title: "Defamation", text: "Civil and criminal defamation — libel and slander in print, broadcast and digital media. We advise on filing suits, seeking damages and defending claims, balancing free speech and reputation." },
-  { icon: "bi-journal-bookmark", title: "Writs & Appeals", text: "Writ petitions and appeals before the High Courts and the Supreme Court involving constitutional rights, administrative action and public-interest matters." },
-  { icon: "bi-briefcase", title: "Labour, Industrial & Employment", text: "Employment agreements, labour-law compliance and representation before Labour Courts, Industrial Tribunals and appellate authorities — wrongful termination, wage disputes, workplace harassment (POSH) and collective bargaining." },
-  { icon: "bi-person-badge", title: "Administrative & Service Law", text: "Government employment, promotions, transfers, pensions and disciplinary proceedings before the Central Administrative Tribunal (CAT), High Courts and the Supreme Court." },
-  { icon: "bi-tree", title: "Trusts, Estate & Family Planning", text: "Creation of trusts, estate planning and succession — drafting wills, establishing family trusts and ensuring the smooth administration of estates while minimising future disputes." },
-  { icon: "bi-building-check", title: "Property & RERA", text: "Property disputes and matters under the Real Estate (Regulation and Development) Act — drafting property agreements, handling title disputes and representing clients before RERA authorities." },
-  { icon: "bi-cash-coin", title: "Banking & Finance", text: "Loan disputes, recovery suits, NPA litigation and regulatory compliance — including drafting loan agreements and advising on financial restructuring for institutions and borrowers." },
-  { icon: "bi-heart", title: "Family & Matrimonial", text: "Divorce, child custody, alimony and domestic violence — empathetic yet effective representation through negotiation, mediation and court proceedings." },
-  { icon: "bi-book", title: "Constitutional Matters", text: "Complex constitutional questions addressing critical socio-political issues — including the Marital Rape and Same-Sex Marriage litigation argued before the Hon'ble High Court of Delhi and the Hon'ble Supreme Court of India." }
+  { icon: "bi-bank2", title: "Dispute Resolution",
+    text: "An integrated approach to dispute resolution. We analyse the intricacies of each matter and recommend the most appropriate mechanism—litigation, arbitration or other forms of ADR—across commercial, contractual, employment and property disputes. We provide cost-effective and time-efficient solutions aimed at minimising disruption to our clients’ operations.",
+    items: ["Commercial disputes", "Contractual disputes", "Employment disputes", "Property disputes", "Strategy, drafting and representation"] },
+  { icon: "bi-buildings", title: "Commercial & Corporate Litigation",
+    text: "Holistic support to corporations, start-ups and businesses — recovery suits, shareholder disagreements, contractual disputes and claims of oppression and mismanagement, together with corporate governance and regulatory compliance issues, and a proactive approach to pre-litigation mediation.",
+    items: ["Recovery suits", "Shareholder disputes", "Oppression and mismanagement", "Pre-litigation mediation", "Strategy, drafting and representation"] },
+  { icon: "bi-house-door", title: "Civil Litigation",
+    text: "We provide end-to-end legal support in property disputes, contractual disputes, inheritance disputes and tort claims, from drafting pleadings and initiating proceedings through trials and appeals before the District Courts, High Courts and the Supreme Court of India.",
+    items: ["Property disputes", "Inheritance disputes", "Tort claims", "Trials and appeals", "Strategy, drafting and representation"] },
+  { icon: "bi-globe2", title: "International & Domestic Arbitration",
+    text: "Ad hoc and institutional arbitrations (including before the DIAC) across construction, finance and technology — from drafting arbitration agreements to enforcing awards, with a strong emphasis on confidentiality and cost-efficiency.",
+    items: ["Institutional (DIAC) arbitration", "Ad hoc arbitration", "Interim measures under Section 9", "Enforcement of arbitral awards", "Strategy, drafting and representation"] },
+  { icon: "bi-graph-down-arrow", title: "Insolvency (IBC)",
+    text: "We represent creditors, debtors and resolution professionals in CIRP, liquidation and debt restructuring proceedings before the National Company Law Tribunal (NCLT) and the National Company Law Appellate Tribunal (NCLAT), with close attention to the timelines prescribed under the Insolvency and Bankruptcy Code.",
+    items: ["Applications under Sections 7 and 9", "CIRP proceedings", "Liquidation", "Debt restructuring", "Strategy, drafting and representation"] },
+  { icon: "bi-shield-lock", title: "Criminal & White-Collar Crimes",
+    text: "Robust representation in fraud, corruption, money laundering (PMLA) and embezzlement matters — through investigations, trials and appeals — with defence strategies that also mitigate reputational risk, and support for internal corporate investigations.",
+    items: ["Fraud and embezzlement", "PMLA and Prevention of Corruption Act matters", "Investigations and proceedings under the BNSS", "Trials, bail and appeals", "Strategy, drafting and representation"] },
+  { icon: "bi-lightning-charge", title: "Injunctions & Interim Relief",
+    text: "Urgent injunctions and stay orders before courts and tribunals — securing immediate protection while laying the foundation for favourable final outcomes.",
+    items: ["Ad interim injunctions", "Stay orders", "Status quo orders", "Asset protection", "Strategy, drafting and representation"] },
+  { icon: "bi-people", title: "Consumer Disputes",
+    text: "Representing consumers and businesses before District Commissions, State Commissions and the NCDRC in matters involving defective goods, deficient services, misleading advertisements and unfair trade practices.",
+    items: ["Defective goods", "Deficiency in service", "Misleading advertisements", "Unfair trade practices", "Strategy, drafting and representation"] },
+  { icon: "bi-award", title: "Special Leave Petitions (SLPs)",
+    text: "We advise and represent clients in Special Leave Petitions before the Hon’ble Supreme Court of India, including matters involving constitutional challenges, statutory interpretation and challenges to orders and judgments of lower courts and tribunals, supported by meticulous research, drafting and advocacy.",
+    items: ["Special Leave Petitions", "Constitutional challenges", "Statutory interpretation", "Challenges to orders and judgments of lower courts and tribunals", "Strategy, drafting and representation"] },
+  { icon: "bi-file-earmark-text", title: "Contractual Disputes",
+    text: "Breach of contract, enforcement of agreements and disputes over contractual terms — negotiating settlements and representing clients in litigation and arbitration with a balance of legal and commercial considerations.",
+    items: ["Breach of contract", "Enforcement of agreements", "Interpretation of contractual terms", "Negotiated settlements", "Strategy, drafting and representation"] },
+  { icon: "bi-columns-gap", title: "Delhi High Court – Original Side",
+    text: "High-stakes commercial disputes and civil litigation on the Original Side of the High Court of Delhi — injunctions, recovery suits, intellectual property disputes and more, from pleadings to trial and appeal.",
+    items: ["Commercial suits", "Recovery suits", "Intellectual property disputes", "Trials and appeals", "Strategy, drafting and representation"] },
+  { icon: "bi-megaphone", title: "Defamation",
+    text: "Civil and criminal defamation — libel and slander in print, broadcast and digital media. We advise on filing suits, seeking damages and defending claims, balancing free speech and reputation.",
+    items: ["Civil defamation suits", "Criminal defamation", "Digital and social media", "Defence of defamation claims", "Strategy, drafting and representation"] },
+  { icon: "bi-journal-bookmark", title: "Writs & Appeals",
+    text: "Writ petitions and appeals before the High Courts and the Supreme Court involving constitutional rights, administrative action and public-interest matters.",
+    items: ["Writ petitions", "Administrative action", "Public-interest matters", "Appeals", "Strategy, drafting and representation"] },
+  { icon: "bi-briefcase", title: "Labour, Industrial & Employment",
+    text: "Employment agreements, labour law compliance and representation before Labour Courts, Industrial Tribunals and appellate authorities — wrongful termination, wage disputes, workplace harassment (POSH) and collective bargaining.",
+    items: ["Wrongful termination", "Wage disputes", "POSH matters", "Labour law compliance", "Strategy, drafting and representation"] },
+  { icon: "bi-person-badge", title: "Administrative & Service Law",
+    text: "Government employment, promotions, transfers, pensions and disciplinary proceedings before the Central Administrative Tribunal (CAT), High Courts and the Supreme Court.",
+    items: ["Promotions and transfers", "Pensions", "Disciplinary proceedings", "CAT matters", "Strategy, drafting and representation"] },
+  { icon: "bi-tree", title: "Trusts, Estate & Family Planning",
+    text: "Creation of trusts, estate planning and succession — drafting wills, establishing family trusts and ensuring the smooth administration of estates while minimising future disputes.",
+    items: ["Wills", "Family trusts", "Succession planning", "Estate administration", "Strategy, drafting and representation"] },
+  { icon: "bi-building-check", title: "Property & RERA",
+    text: "Property disputes and matters under the Real Estate (Regulation and Development) Act — drafting property agreements, handling title disputes and representing clients before RERA authorities.",
+    items: ["Title disputes", "RERA complaints", "Property agreements", "Builder–buyer disputes", "Strategy, drafting and representation"] },
+  { icon: "bi-cash-coin", title: "Banking & Finance",
+    text: "Loan disputes, recovery suits, NPA litigation and regulatory compliance — including drafting loan agreements and advising on financial restructuring for institutions and borrowers.",
+    items: ["Loan disputes", "NPA litigation", "DRT and DRAT matters", "Financial restructuring", "Strategy, drafting and representation"] },
+  { icon: "bi-heart", title: "Family & Matrimonial",
+    text: "Divorce, child custody, alimony and domestic violence — empathetic yet effective representation through negotiation, mediation and court proceedings.",
+    items: ["Divorce", "Child custody", "Alimony and maintenance", "Domestic violence", "Strategy, drafting and representation"] },
+  { icon: "bi-book", title: "Constitutional Matters",
+    text: "Complex constitutional questions addressing critical socio-political issues — including the Marital Rape and Same-Sex Marriage litigation before the Hon’ble High Court of Delhi and the Hon’ble Supreme Court of India.",
+    items: ["Fundamental rights", "Public-law challenges", "Constitutional challenges", "Supreme Court and High Court matters", "Strategy, drafting and representation"] }
 ];
 
 AIL.drafting = [
-  "Joint Venture & Foreign Collaboration Agreements (incl. RBI / FIPB approvals)",
+  "Joint Venture & Foreign Collaboration Agreements (including FDI / FEMA compliance)",
   "Technology Transfer Agreements",
   "Shareholders' Agreements, M&A and Takeover Agreements",
   "Sale / Purchase / Collaboration / Escrow Agreements",
@@ -191,11 +222,13 @@ AIL.drafting = [
   "Hire Purchase & Infrastructure Project Agreements",
   "Immovable Property Agreements",
   "Confidentiality & Non-circumvention Agreements",
-  "Expatriate, Arbitration, Service & Insurance Contracts",
+  "Arbitration Agreements",
+  "Expatriate Employment Agreements",
+  "Insurance Contracts",
   "Vendor & Service Agreements",
-  "Lease Deeds (incl. aircraft, oil rigs & ships)",
+  "Lease Deeds (including aircraft, oil rigs & ships)",
   "Trust Deeds, Recovery Agency & Labour Agreements",
-  "Corporate policies"
+  "Corporate Policies"
 ];
 
 /* ---------- FORUMS ---------- */

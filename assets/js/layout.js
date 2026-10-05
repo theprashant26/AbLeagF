@@ -151,9 +151,9 @@
         <div class="disclaimer__body">
           <p>The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website, <strong>${F.website}</strong>, you acknowledge and confirm that:</p>
           <ul>
-            <li>You are seeking information relating to ${F.name} of your own accord and there has been no form of solicitation, advertisement, personal communication, invitation or inducement of any sort whatsoever from Ab Initio Legal LLP or any of its members to solicit any work through this website.</li>
-            <li>The information on this website is provided solely for informational purposes and should not be construed as legal advice or an opinion. It does not create an advocate–client relationship.</li>
-            <li>Ab Initio Legal LLP shall not be liable for any consequence of any action taken by you relying on the material or information provided on this website. You should seek independent legal advice for your specific situation.</li>
+            <li>You are seeking information relating to ${F.name} of your own accord. No solicitation, advertisement, personal communication, invitation or inducement of any kind has been made by Ab Initio Legal LLP or any of its partners or representatives for the purpose of soliciting work through this website.</li>
+            <li>The information on this website is provided solely for informational purposes and should not be construed as legal advice or a legal opinion. It does not create an advocate–client relationship.</li>
+            <li>Ab Initio Legal LLP shall not be liable for any consequences arising from any action taken by you in reliance on the material or information provided on this website. You should seek independent legal advice for your specific situation.</li>
             <li>Any information you share with us through this website will not be treated as confidential until an advocate–client relationship is formally established.</li>
             <li>The contents of this website, including text, logos and graphics, are the intellectual property of Ab Initio Legal LLP.</li>
           </ul>

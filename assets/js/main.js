@@ -15,8 +15,10 @@
 
   const pad = (n) => String(n).padStart(2, "0");
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const fmtDate = (iso) => { const d = new Date(iso + "T00:00:00"); return isNaN(d) ? iso : `${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`; };
-  const coverDate = (iso) => { const d = new Date(iso + "T00:00:00"); return isNaN(d) ? esc(iso) : `${MONTHS[d.getMonth()]}<br><em>${d.getFullYear()}</em>`; };
+  // Dates: "YYYY-MM-DD" shows the full date; "YYYY-MM" (monthly issues) shows month and year only.
+  const toDate = (iso) => new Date((String(iso).length === 7 ? iso + "-01" : iso) + "T00:00:00");
+  const fmtDate = (iso) => { const d = toDate(iso); if (isNaN(d)) return iso; const my = `${MONTHS[d.getMonth()]} ${d.getFullYear()}`; return String(iso).length === 7 ? my : `${d.getDate()} ${my}`; };
+  const coverDate = (iso) => { const d = toDate(iso); return isNaN(d) ? esc(iso) : `${MONTHS[d.getMonth()]}<br><em>${d.getFullYear()}</em>`; };
   const TYPE_LABEL = { newsletter: "Newsletter", article: "Article", research: "Research Paper", update: "Legal Update" };
 
   /* ==================================================================
@@ -57,6 +59,7 @@
         <div class="eyebrow mt-3 mb-2">Practice Area ${pad(+card.dataset.practice + 1)}</div>
         <h3 class="mb-4">${esc(p.title)}</h3>
         <p class="lead-text mb-4" style="max-width:none">${esc(p.text)}</p>
+        ${(p.items || []).length ? `<h4 class="profile-subhead mt-0">Key Matters</h4><ul class="focus-list mb-4">${p.items.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
         <div class="d-flex flex-wrap gap-3">
           <a class="btn-ail" href="contact.html">Discuss a Matter <i class="bi bi-arrow-right"></i></a>
           <a class="btn-ail btn-dark-outline" href="team.html">Meet the Team</a>
@@ -73,14 +76,14 @@
           <img src="${esc(m.photo)}" alt="${esc(m.name)}, ${esc(m.designation)}" loading="lazy">
           <div class="team-card__actions">
             <span>View Profile</span>
-            <a class="li-btn" href="${esc(m.linkedin)}" target="_blank" rel="noopener" aria-label="${esc(m.name)} on LinkedIn" data-stop><i class="bi bi-linkedin"></i></a>
+            ${m.linkedin ? `<a class="li-btn" href="${esc(m.linkedin)}" target="_blank" rel="noopener" aria-label="${esc(m.name)} on LinkedIn" data-stop><i class="bi bi-linkedin"></i></a>` : ""}
           </div>
         </div>
         <div class="team-card__body">
           <div class="team-card__role">${esc(m.designation)}${m.practice ? " · " + esc(m.practice) : ""}</div>
           <h3>${esc(m.name)}</h3>
           <div class="team-card__qual">${esc(m.qualifications)}</div>
-          <a class="li-inline" href="${esc(m.linkedin)}" target="_blank" rel="noopener" data-stop><i class="bi bi-linkedin"></i> LinkedIn Profile</a>
+          ${m.linkedin ? `<a class="li-inline" href="${esc(m.linkedin)}" target="_blank" rel="noopener" data-stop><i class="bi bi-linkedin"></i> LinkedIn Profile</a>` : ""}
         </div>
       </div>`;
   }
@@ -105,7 +108,7 @@
           ${(m.practiceAreas || []).length ? `<div class="lead-card__areas"><span>Practice Areas</span>${m.practiceAreas.slice(0, 4).map(esc).join(" · ")}${m.practiceAreas.length > 4 ? " · …" : ""}</div>` : ""}
           <div class="lead-card__actions">
             <span class="link-arrow">View Profile <i class="bi bi-arrow-right"></i></span>
-            <a class="li-btn" href="${esc(m.linkedin)}" target="_blank" rel="noopener" aria-label="${esc(m.name)} on LinkedIn" data-stop><i class="bi bi-linkedin"></i></a>
+            ${m.linkedin ? `<a class="li-btn" href="${esc(m.linkedin)}" target="_blank" rel="noopener" aria-label="${esc(m.name)} on LinkedIn" data-stop><i class="bi bi-linkedin"></i></a>` : ""}
           </div>
         </div>
       </article>`;
@@ -140,13 +143,13 @@
             <dt>Qualifications</dt><dd>${esc(m.qualifications)}</dd>
             ${(m.practiceAreas || []).length ? `<dt>Practice Areas</dt><dd>${m.practiceAreas.map(esc).join("; ")}</dd>` : ""}
             <dt>Email</dt><dd><a href="mailto:${esc(AIL.firm.emails[0])}">${esc(AIL.firm.emails[0])}</a></dd>
-            <dt>LinkedIn</dt><dd><a href="${esc(m.linkedin)}" target="_blank" rel="noopener">View profile</a></dd>
+            ${m.linkedin ? `<dt>LinkedIn</dt><dd><a href="${esc(m.linkedin)}" target="_blank" rel="noopener">View profile</a></dd>` : ""}
           </dl>
           <h4 class="profile-subhead">Profile</h4>
           ${m.bio.map((p) => `<p>${esc(p)}</p>`).join("")}
           ${(m.focus || []).length ? `<h4 class="profile-subhead">Areas of Focus</h4><ul class="focus-list">${m.focus.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <a class="btn-ail" href="${esc(m.linkedin)}" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> Connect on LinkedIn</a>
+            ${m.linkedin ? `<a class="btn-ail" href="${esc(m.linkedin)}" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> Connect on LinkedIn</a>` : ""}
             <a class="btn-ail btn-dark-outline" href="contact.html">Get in Touch</a>
           </div>
         </div></div>`;
@@ -198,7 +201,8 @@
           <i class="bi bi-geo-alt"></i>
           <div class="office-card__label">${esc(o.label)}</div>
           <h3>${esc(o.city)}</h3>
-          <p>${esc(o.address || "Associate office")}</p>
+          ${o.address ? `<p>${esc(o.address)}</p>` : ""}
+          ${o.hq && AIL.firm.mapLink ? `<a class="office-card__dir" href="${esc(AIL.firm.mapLink)}" target="_blank" rel="noopener">Get directions <i class="bi bi-arrow-up-right"></i></a>` : ""}
         </div>`).join("");
     });
   }
