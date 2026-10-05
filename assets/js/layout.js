@@ -121,7 +121,18 @@
           </div>
         </div>
       </div>
-      <p class="footer-big" aria-hidden="true">Ab Initio Legal LLP</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="container-xl">
+          <a href="index.html">Home</a>
+          <a href="about.html">The Firm</a>
+          <a href="practice-areas.html">Practice Areas</a>
+          <a href="team.html">Our Team</a>
+          <a href="publications.html">Publications</a>
+          <a href="careers.html">Careers</a>
+          <a href="contact.html">Connect With Us</a>
+        </div>
+      </nav>
+      <div class="footer-brand"><img src="assets/img/brand/logo-light.png" alt="Ab Initio Legal LLP — Advocates &amp; Solicitors" loading="lazy"></div>
       <div class="footer-bottom">
         <div class="container-xl">
           <span>© ${year} ${F.name}. All rights reserved.</span>
@@ -175,8 +186,7 @@
   const PRELOADER = `
     <div class="preloader" id="preloader" aria-hidden="true">
       <div class="preloader__inner">
-        <img class="preloader__mark" src="assets/img/brand/mark-light.png" alt="">
-        <div class="preloader__word">Ab Initio</div>
+        <img class="preloader__mark" src="assets/img/brand/logo-light.png" alt="">
         <div class="preloader__bar"><span></span></div>
       </div>
     </div>`;

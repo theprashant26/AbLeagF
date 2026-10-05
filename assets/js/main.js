@@ -82,14 +82,17 @@
         <div class="team-card__body">
           <div class="team-card__role">${esc(m.designation)}${m.practice ? " · " + esc(m.practice) : ""}</div>
           <h3>${esc(m.name)}</h3>
-          <div class="team-card__qual">${esc(m.qualifications)}</div>
+          ${m.qualifications ? `<div class="team-card__qual">${esc(m.qualifications)}</div>` : ""}
           ${m.linkedin ? `<a class="li-inline" href="${esc(m.linkedin)}" target="_blank" rel="noopener" data-stop><i class="bi bi-linkedin"></i> LinkedIn Profile</a>` : ""}
         </div>
       </div>`;
   }
   // Short bio excerpt: first sentence (plus the next if the first is very short)
+  // Profile sections: structured `profile` if provided, otherwise the plain `bio` paragraphs
+  const profileOf = (m) => m.profile || [{ heading: "Profile", paras: m.bio || [] }];
   function excerpt(m) {
-    const sentences = (m.bio[0] || "").match(/[^.!?]+[.!?]+(\s|$)/g) || [m.bio[0] || ""];
+    const first = (profileOf(m)[0].paras || [])[0] || "";
+    const sentences = first.match(/[^.!?]+[.!?]+(\s|$)/g) || [first];
     let out = sentences[0].trim();
     if (out.length < 110 && sentences[1]) out += " " + sentences[1].trim();
     return out;
@@ -103,7 +106,7 @@
           <div class="team-card__role">${esc(m.designation)}</div>
           <h3>${esc(m.name)}</h3>
           ${m.practice ? `<div class="lead-card__practice">${esc(m.practice)}</div>` : ""}
-          <div class="team-card__qual">${esc(m.qualifications)}</div>
+          ${m.qualifications ? `<div class="team-card__qual">${esc(m.qualifications)}</div>` : ""}
           <p class="lead-card__excerpt">${esc(excerpt(m))}</p>
           ${(m.practiceAreas || []).length ? `<div class="lead-card__areas"><span>Practice Areas</span>${m.practiceAreas.slice(0, 4).map(esc).join(" · ")}${m.practiceAreas.length > 4 ? " · …" : ""}</div>` : ""}
           <div class="lead-card__actions">
@@ -140,13 +143,16 @@
           <h3>${esc(m.name)}</h3>
           <dl class="profile-facts">
             <dt>Designation</dt><dd>${esc(m.designation)}${m.practice ? ` — ${esc(m.practice)}` : ""}</dd>
-            <dt>Qualifications</dt><dd>${esc(m.qualifications)}</dd>
+            ${m.qualifications ? `<dt>Qualifications</dt><dd>${esc(m.qualifications)}</dd>` : ""}
             ${(m.practiceAreas || []).length ? `<dt>Practice Areas</dt><dd>${m.practiceAreas.map(esc).join("; ")}</dd>` : ""}
-            <dt>Email</dt><dd><a href="mailto:${esc(AIL.firm.emails[0])}">${esc(AIL.firm.emails[0])}</a></dd>
+            <dt>Office</dt><dd><a href="tel:${esc(AIL.firm.phoneHref)}">${esc(AIL.firm.phone)}</a></dd>
+            <dt>Email</dt><dd>${(m.emails || AIL.firm.emails).map((e) => `<a href="mailto:${esc(e)}">${esc(e)}</a>`).join("<br>")}</dd>
             ${m.linkedin ? `<dt>LinkedIn</dt><dd><a href="${esc(m.linkedin)}" target="_blank" rel="noopener">View profile</a></dd>` : ""}
           </dl>
-          <h4 class="profile-subhead">Profile</h4>
-          ${m.bio.map((p) => `<p>${esc(p)}</p>`).join("")}
+          ${profileOf(m).map((sec) => `
+            <h4 class="profile-subhead">${esc(sec.heading)}</h4>
+            ${(sec.paras || []).map((p) => `<p>${esc(p)}</p>`).join("")}
+            ${(sec.bullets || []).length ? `<ul class="profile-bullets">${sec.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}`).join("")}
           ${(m.focus || []).length ? `<h4 class="profile-subhead">Areas of Focus</h4><ul class="focus-list">${m.focus.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
           <div class="d-flex flex-wrap gap-3 mt-4">
             ${m.linkedin ? `<a class="btn-ail" href="${esc(m.linkedin)}" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> Connect on LinkedIn</a>` : ""}
@@ -184,7 +190,7 @@
     if (tw) {
       if (AIL.testimonials && AIL.testimonials.length) {
         $("#testimonialsList").innerHTML = AIL.testimonials.map((t) => `
-          <div class="col-md-6" data-stagger-item><div class="testimonial">
+          <div class="col-lg-4 col-md-6" data-stagger-item><div class="testimonial">
             <i class="bi bi-quote text-gold" style="font-size:2.6rem"></i>
             <blockquote>${esc(t.quote)}</blockquote>
             <div class="who">${esc(t.name)}</div><small class="text-muted">${esc(t.role)}</small>
@@ -756,7 +762,6 @@
       onComplete: () => { pre.remove(); lockScroll("preloader", false); }
     });
     tl.to(".preloader__mark", { clipPath: "inset(0% 0 0 0)", duration: .7, ease: "power3.inOut" })
-      .to(".preloader__word", { opacity: 1, letterSpacing: ".7em", duration: .6, ease: "power2.out" }, "-=.3")
       .to(".preloader__bar span", { scaleX: 1, duration: .6, ease: "power2.inOut" }, "-=.6")
       .to(".preloader__inner", { opacity: 0, y: -20, duration: .3, ease: "power2.in" })
       .to(pre, { yPercent: -100, duration: .7, ease: "power4.inOut" }, "-=.05")
@@ -766,6 +771,46 @@
   /* ==================================================================
      BOOT
      ================================================================== */
+  // Firm name in running text is shown in the logo's form (serif capitals: AB INITIO LEGAL LLP).
+  // Applies automatically to static text and to content rendered later (cards, pop-ups, filters).
+  const FIRM_RE = /Ab Initio Legal(?: LLP)?/g;
+  const SKIP = new Set(["SCRIPT", "STYLE", "TEXTAREA", "INPUT", "OPTION", "SELECT", "TITLE", "NOSCRIPT"]);
+  function brandify(root) {
+    if (!root || root.nodeType !== 1) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: (n) => {
+        const p = n.parentElement;
+        if (!p || SKIP.has(p.tagName) || p.closest(".firm-name, [aria-hidden='true'], .preloader")) return NodeFilter.FILTER_REJECT;
+        FIRM_RE.lastIndex = 0;
+        return FIRM_RE.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach((n) => {
+      const frag = document.createDocumentFragment();
+      let last = 0;
+      n.nodeValue.replace(FIRM_RE, (m, i) => {
+        frag.appendChild(document.createTextNode(n.nodeValue.slice(last, i)));
+        const span = document.createElement("span");
+        span.className = "firm-name"; span.textContent = m.replace(/^Ab /, "AB "); span.setAttribute("aria-label", m);
+        frag.appendChild(span); last = i + m.length;
+      });
+      frag.appendChild(document.createTextNode(n.nodeValue.slice(last)));
+      n.replaceWith(frag);
+    });
+  }
+  function initBrandify() {
+    brandify(document.body);
+    let queued = new Set(), t;
+    new MutationObserver((muts) => {
+      muts.forEach((m) => m.addedNodes.forEach((n) => n.nodeType === 1 && !n.classList.contains("firm-name") && queued.add(n)));
+      if (!queued.size) return;
+      clearTimeout(t);
+      t = setTimeout(() => { queued.forEach(brandify); queued = new Set(); }, 0);
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+
   function boot() {
     renderPractices();
     renderTeam();
@@ -783,6 +828,7 @@
     initForms();
     initHero();
     initScrollAnimations();
+    initBrandify();
     initRefreshers();
     initRevealFallback();
     runIntro();

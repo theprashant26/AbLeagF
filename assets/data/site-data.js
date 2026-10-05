@@ -70,23 +70,74 @@ AIL.team = [
     name: "Abhay Chitravanshi",
     designation: "Partner",
     practice: "Litigation, ADR & White Collar Crimes",
-    qualifications: "Campus Law Centre, University of Delhi",
+    qualifications: "Campus Law Centre, Faculty of Law, University of Delhi",
     group: "partners",
     photo: "assets/img/team/abhay-chitravanshi.jpg",
     linkedin: "https://www.linkedin.com/in/abhay-chitravanshi-4028a8137",
-    practiceAreas: ["Commercial & Corporate Litigation", "Insolvency (IBC)", "International & Domestic Arbitration", "Criminal & White-Collar Crimes", "Constitutional Matters", "Consumer Disputes", "Labour, Industrial & Employment", "Trusts, Estate & Family Planning"],
-    focus: ["Commercial & Insolvency", "Arbitration", "PMLA & Prevention of Corruption Act", "Constitutional"],
-    bio: [
-      "Mr. Abhay Chitravanshi is a seasoned legal practitioner with seven years of extensive litigation experience, heading the litigation practice of the firm. An alumnus of Campus Law Centre (CLC), University of Delhi, he graduated with a First Division.",
-      "He regularly appears and independently argues matters before the Hon’ble Supreme Court of India, the Hon’ble High Court of Delhi, and various judicial and quasi-judicial fora, representing clients across a wide range of complex disputes. He has successfully represented clients in obtaining interim reliefs, final orders and judgments. His practice encompasses Commercial and Insolvency Litigation, International and Domestic Arbitration, Civil and Criminal Trials, and proceedings under the Prevention of Money Laundering Act, 2002 (PMLA) and the Prevention of Corruption Act, 1988 (POCA). He also has substantial experience in Consumer and Service matters, Prevention of Sexual Harassment (POSH) matters, Employment-related disputes, and other complex disputes involving substantial questions of law.",
-      "Mr. Chitravanshi has closely worked on Constitutional matters with his involvement in the landmark litigation concerning Marital Rape and Same-Sex Marriage before the Hon'ble Delhi High Court, the former of which is still pending adjudication before the Hon'ble Supreme Court. His expertise extends to cross-examinations in Arbitrations and Commercial Disputes, strategising in Criminal and White-Collar matters, and managing Property, Family Planning & Estates, Trusts and lease disputes.",
-      "His career is further highlighted by his successful clearance of the JAG (Indian Army) SSB in 2019 and his selection as a Supreme Court Legal Researcher in 2023."
+    emails: ["abhay@abinitiolegal.in", "communications@abinitiolegal.in"],
+    practiceAreas: ["Commercial & Corporate Litigation", "Civil Litigation", "International & Domestic Arbitration", "Insolvency (IBC)", "Criminal & White-Collar Crimes", "Writs & Appeals", "Special Leave Petitions (SLPs)", "Trusts, Estate & Family Planning"],
+    focus: ["Commercial & Insolvency", "Arbitration", "PMLA & Prevention of Corruption Act", "Commercial and Civil Litigation", "Criminal and White Collar Crimes", "Writ Petitions and Special Leave Petitions"],
+    profile: [
+      {
+        heading: "Short Biography",
+        paras: [
+          "Mr. Abhay Chitravanshi heads the litigation practice of the firm, a position he acquired at the age of 29. An Advocate with eight years of litigation experience, he is registered with the Bar Council of Delhi and is a member of the Delhi High Court Bar Association and the Supreme Court Bar Association. He is an alumnus of Campus Law Centre (CLC), Faculty of Law, University of Delhi, where he graduated with First Division."
+        ]
+      },
+      {
+        heading: "Experience",
+        paras: [
+          "Mr. Chitravanshi regularly appears and has argued independently before the Hon'ble Supreme Court of India, the Hon'ble High Court of Delhi, the Delhi International Arbitration Centre (DIAC), Arbitral Tribunals, and various judicial and quasi-judicial forums. His practice spans Commercial and Insolvency litigation, Domestic and International Arbitration, Civil and Criminal (Blue and White-Collar Crime) trials, and matters under the Prevention of Money Laundering Act, 2002 (PMLA) and the Prevention of Corruption Act, 1988 (POCA). He also has substantial experience in Consumer and Service matters, Employment Disputes, POSH, and complex disputes involving substantial questions of law.",
+          "He has worked closely on constitutional matters, including the Marital Rape and Same-Sex Marriage litigation before the Hon'ble Delhi High Court, the former of which remains pending before the Hon'ble Supreme Court."
+        ]
+      },
+      {
+        heading: "Areas of Expertise",
+        bullets: [
+          "Arbitration and Civil and Commercial Disputes, including admission hearings, injunctions and cross-examination in Arbitral proceedings",
+          "Writ petitions and Special Leave Petitions",
+          "Advisory and strategy in criminal and white-collar matters",
+          "Property, Partition, Wills, Estate planning, Trusts and Lease Disputes"
+        ]
+      },
+      {
+        heading: "Career Highlights",
+        paras: [
+          "Cleared the Services Selection Board (SSB) for the JAG Branch of the Indian Army in 2019, and was selected as a Law Researcher at the Supreme Court of India in 2023."
+        ]
+      }
+    ]
+  },
+  {
+    slug: "bhawna-nanda",
+    name: "Bhawna Nanda",
+    designation: "Senior Associate",
+    qualifications: "B.A. LL.B. (Hons.), LL.M. (Constitutional Law)",
+    group: "associates",
+    photo: "assets/img/team/bhawna-nanda.jpg",
+    linkedin: "https://www.linkedin.com/in/bhawna-nanda-703b99252",
+    emails: ["communications@abinitiolegal.in"],
+    practiceAreas: ["Civil Litigation", "Commercial & Corporate Litigation", "International & Domestic Arbitration", "Property & RERA", "Family & Matrimonial", "Banking & Finance"],
+    focus: ["Arbitration Disputes", "Civil and Commercial litigation", "Property disputes", "Family Disputes", "RERA and DRT"],
+    profile: [
+      {
+        heading: "Short Biography",
+        paras: [
+          "Ms. Bhawna Nanda is a civil litigator whose practice covers recovery matters, family disputes and commercial suits. She appears before the District Courts, the Hon'ble High Court of Delhi, the Delhi International Arbitration Centre and specialised forums including the National Consumer Disputes Redressal Commission (NCDRC), the Real Estate Regulatory Authority (RERA), the Debt Recovery Tribunal (DRT) and the Debt Recovery Appellate Tribunal (DRAT)."
+        ]
+      },
+      {
+        heading: "Experience",
+        paras: [
+          "Ms. Nanda has represented the firm's clients in Commercial recovery suits, matters under the Negotiable Instruments Act, 1881, family law and property disputes, and criminal matters. Her work includes legal research, drafting and negotiation, with a close focus on detail and on keeping clients informed throughout."
+        ]
+      }
     ]
   },
   {
     slug: "deepak-shankar",
     name: "Deepak Shankar",
-    designation: "Senior Associate",
+    designation: "Associate",
     qualifications: "LLB",
     group: "associates",
     photo: "assets/img/team/deepak-shankar.jpg",
@@ -99,18 +150,28 @@ AIL.team = [
     ]
   },
   {
-    slug: "bhawna-nanda",
-    name: "Bhawna Nanda",
-    designation: "Senior Associate",
-    qualifications: "B.A. LL.B. (Hons.), LL.M. (Constitutional Law)",
+    slug: "manvi-gupta",
+    name: "Manvi Gupta",
+    designation: "Associate",
     group: "associates",
-    photo: "assets/img/team/bhawna-nanda.jpg",
-    linkedin: "https://www.linkedin.com/in/bhawna-nanda-703b99252",
-    practiceAreas: ["Banking & Finance", "Commercial & Corporate Litigation", "Family & Matrimonial", "Property & RERA", "Consumer Disputes"],
-    focus: ["Recovery", "Commercial Suits", "Family Law", "RERA & DRT"],
-    bio: [
-      "Ms. Bhawna Nanda is a hardworking civil litigator with experience in Recovery Matters, Family Disputes and Commercial Suits. She has appeared before the District Courts, the Delhi High Court and specialised tribunals such as the NCDRC, RERA, the Debt Recovery Tribunal (DRT) and the Debt Recovery Appellate Tribunal (DRAT).",
-      "She has represented the firm's clients in Commercial Recovery Suits, Negotiable Instruments matters, Family Law and Property Disputes, as well as criminal matters. Ms. Nanda is adept at legal research, drafting and negotiation, and is known for her detailed approach and dedication to client service."
+    photo: "assets/img/team/manvi-gupta.jpg",
+    linkedin: "",
+    emails: ["communications@abinitiolegal.in"],
+    practiceAreas: ["International & Domestic Arbitration", "Civil Litigation", "Commercial & Corporate Litigation", "Property & RERA"],
+    focus: ["Arbitration Disputes", "Civil and Commercial litigation", "Real Estate litigation", "Corporate litigation"],
+    profile: [
+      {
+        heading: "Short Biography",
+        paras: [
+          "Ms. Manvi Gupta is a practising Advocate and is currently associated with Ab Initio Legal LLP. She has experience in Litigation and Dispute Resolution, with exposure to Corporate and Commercial matters, Arbitration, Insolvency, Regulatory Matters and White-Collar Crimes."
+        ]
+      },
+      {
+        heading: "Experience",
+        paras: [
+          "At Ab Initio Legal LLP, Ms. Gupta is involved in legal research, drafting and preparation of matters for proceedings before Courts, Tribunals and Arbitral Forums. Her work includes preparing legal documents, as well as assisting in case analysis and litigation strategy. She has also worked on matters involving Arbitration, Insolvency, Corporate Disputes, regulatory issues, White-Collar Crimes and Real Estate Litigations. Her approach is detail-oriented and research-driven, with an emphasis on clear drafting and practical legal analysis."
+        ]
+      }
     ]
   },
   {
@@ -167,7 +228,7 @@ AIL.practices = [
     items: ["Fraud and embezzlement", "PMLA and Prevention of Corruption Act matters", "Investigations and proceedings under the BNSS", "Trials, bail and appeals", "Strategy, drafting and representation"] },
   { icon: "bi-lightning-charge", title: "Injunctions & Interim Relief",
     text: "Urgent injunctions and stay orders before courts and tribunals — securing immediate protection while laying the foundation for favourable final outcomes.",
-    items: ["Ad interim injunctions", "Stay orders", "Status quo orders", "Asset protection", "Strategy, drafting and representation"] },
+    items: ["Ad interim injunctions", "Stay orders", "Injunction orders", "Asset protection", "Strategy, drafting and representation"] },
   { icon: "bi-people", title: "Consumer Disputes",
     text: "Representing consumers and businesses before District Commissions, State Commissions and the NCDRC in matters involving defective goods, deficient services, misleading advertisements and unfair trade practices.",
     items: ["Defective goods", "Deficiency in service", "Misleading advertisements", "Unfair trade practices", "Strategy, drafting and representation"] },
@@ -259,7 +320,18 @@ AIL.clients = [
    Example:
    { quote: "…", name: "Name", role: "General Counsel, Company" }
    The section stays hidden until at least one is added. */
-AIL.testimonials = [];
+AIL.testimonials = [
+  { quote: "Ab Initio Legal has successfully represented us in our Arbitration, Civil and Commercial litigation, and has been a trusted partner throughout. The team is prompt, strategic in its approach and keeps us informed at every stage. We value their dedication and recommend them without hesitation.",
+    name: "Saurabh Sodhi", role: "AVP-Legal, Air Works India Engineering Pvt. Ltd." },
+  { quote: "Ab Initio Legal guided me through every stage of my dispute, from the initial regulatory complaint to Conciliation and Arbitration, and represented me with real dedication. They were responsive, clear in their advice and consistently thorough. I am sincerely grateful for their support.",
+    name: "Krishan Pal Singh", role: "Ex-Director, Radico Khaitan" },
+  { quote: "Ab Initio Legal has successfully represented us across a number of our Arbitration matters and has been a reliable partner throughout. The team is responsive, practical in its approach and consistently thorough. We value the care they bring to every matter.",
+    name: "Head Legal / General Counsel", role: "Escorts Kubota Limited" },
+  { quote: "Ab Initio Legal has handled our criminal matters with professionalism, care and dedication. The team is responsive, practical and thorough, including in the documentation that follows. We are grateful for their support and would gladly recommend them.",
+    name: "Amit Bansal", role: "Director, Medigence Network Pvt. Ltd." },
+  { quote: "Ab Initio Legal provided us with a clear, well-reasoned legal opinion and practical advice on the import of our goods and the applicable legal metrology requirements. Their command of the regulatory framework and their prompt, precise guidance allowed us to proceed with confidence. We are grateful for their support and would gladly recommend them.",
+    name: "Sanjeev Negi", role: "SPAL India" }
+];
 
 /* ---------- CAREERS: OPEN POSITIONS ----------
    type: "internship" or "job". Set open: false to hide a role. */
@@ -291,7 +363,7 @@ AIL.openings = [
     title: "Litigation Internship",
     location: "New Delhi (in-office)",
     experience: "3rd–5th year (5-yr) / 2nd–3rd year (3-yr) LL.B.",
-    duration: "4–6 weeks, rolling",
+    duration: "Open throughout the year",
     points: [
       "Assisting in research, drafting and case preparation",
       "Attending hearings before the Supreme Court, Delhi High Court and tribunals",
