@@ -800,3 +800,22 @@ img { max-width: 100%; }
 .testimonial blockquote { font-size: 1.28rem; margin-bottom: 22px; }
 .testimonial .who { margin-top: auto; }
 .testimonial small { display: block; margin-top: 4px; }
+
+/* Testimonial client photos */
+.testimonial__person { margin-top: auto; display: flex; align-items: center; gap: 14px; }
+.testimonial__photo { width: 58px; height: 58px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid var(--gold-pale); flex: 0 0 auto; }
+.testimonial .testimonial__person .who { margin-top: 0; }
+
+/* Greyish overlay on all background images behind text (client request) — keeps text legible */
+.hero__slide::after {
+  background:
+    linear-gradient(rgba(20,20,24,.38), rgba(20,20,24,.38)),
+    linear-gradient(90deg, rgba(10,10,13,.88) 0%, rgba(10,10,13,.62) 40%, rgba(10,10,13,.3) 75%, rgba(10,10,13,.35) 100%),
+    linear-gradient(0deg, rgba(10,10,13,.85) 0%, rgba(10,10,13,0) 40%);
+}
+.page-banner::after {
+  background:
+    linear-gradient(rgba(20,20,24,.42), rgba(20,20,24,.42)),
+    linear-gradient(0deg, rgba(10,10,13,.95) 5%, rgba(10,10,13,.5) 55%, rgba(10,10,13,.65) 100%);
+}
+.cta-band__img { opacity: .18; }

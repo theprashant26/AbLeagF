@@ -319,13 +319,13 @@ AIL.clients = [
    The section stays hidden until at least one is added. */
 AIL.testimonials = [
   { quote: "Ab Initio Legal has successfully represented us in our Arbitration, Civil and Commercial litigation, and has been a trusted partner throughout. The team is prompt, strategic in its approach and keeps us informed at every stage. We value their dedication and recommend them without hesitation.",
-    name: "Saurabh Sodhi", role: "AVP-Legal, Air Works India Engineering Pvt. Ltd." },
+    name: "Saurabh Sodhi", photo: "assets/img/testimonials/saurabh-sodhi.jpg", role: "AVP-Legal, Air Works India Engineering Pvt. Ltd." },
   { quote: "The team has guided me through every stage of my dispute, from the initial regulatory complaint to Conciliation and Arbitration, and represented me with real dedication. They were responsive, clear in their advice and consistently thorough. I am sincerely grateful for their support.",
-    name: "Krishan Pal Singh", role: "Ex-Director, Radico Khaitan" },
+    name: "Krishan Pal Singh", photo: "assets/img/testimonials/kp-singh.jpg", role: "Ex-Director, Radico Khaitan" },
   { quote: "The firm has successfully represented us across a number of our Arbitration matters and has been a reliable partner throughout. The team is responsive, practical in its approach and consistently thorough. We value the care they bring to every matter.",
-    name: "Head Legal / General Counsel", role: "Escorts Kubota Limited" },
+    name: "Brijesh Lamba", photo: "assets/img/testimonials/brijesh-lamba.jpg", role: "Head Legal / General Counsel, Escorts Kubota Limited" },
   { quote: "Mr. Abhay Chitravanshi has handled our criminal matters with professionalism, care and dedication. The team is responsive, practical and thorough, including in the documentation that follows. We are grateful for their support and would gladly recommend them.",
-    name: "Amit Bansal", role: "Director, Medigence Network Pvt. Ltd." },
+    name: "Ameet Bansal", photo: "assets/img/testimonials/ameet-bansal.jpg", role: "Director, Medigence Network Pvt. Ltd." },
   { quote: "The Litigation team at Ab Initio Legal has provided us with a clear, well-reasoned legal opinion and practical advice on the import of our goods and the applicable legal metrology requirements. Their command of the regulatory framework and their prompt, precise guidance allowed us to proceed with confidence. We are grateful for their support and would gladly recommend them.",
     name: "Sanjeev Negi", role: "SPAL India" }
 ];

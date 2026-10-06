@@ -193,7 +193,10 @@
           <div class="col-lg-4 col-md-6" data-stagger-item><div class="testimonial">
             <i class="bi bi-quote text-gold" style="font-size:2.6rem"></i>
             <blockquote>${esc(t.quote)}</blockquote>
-            <div class="who">${esc(t.name)}</div><small class="text-muted">${esc(t.role)}</small>
+            <div class="testimonial__person">
+              ${t.photo ? `<img class="testimonial__photo" src="${esc(t.photo)}" alt="${esc(t.name)}" loading="lazy">` : ""}
+              <div><div class="who">${esc(t.name)}</div><small class="text-muted">${esc(t.role)}</small></div>
+            </div>
           </div></div>`).join("");
       } else tw.remove();
     }
