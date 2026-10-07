@@ -1,5 +1,5 @@
 /* =====================================================================
-   AB INITIO LEGAL — main script
+   AB INITIO LEGAL, main script
    Rendering of data-driven sections + GSAP motion.
    ===================================================================== */
 (function () {
@@ -142,7 +142,7 @@
           <div class="team-card__role">${esc(AIL.firm.name)}</div>
           <h3>${esc(m.name)}</h3>
           <dl class="profile-facts">
-            <dt>Designation</dt><dd>${esc(m.designation)}${m.practice ? ` — ${esc(m.practice)}` : ""}</dd>
+            <dt>Designation</dt><dd>${esc(m.designation)}${m.practice ? ` - ${esc(m.practice)}` : ""}</dd>
             ${m.qualifications ? `<dt>Qualifications</dt><dd>${esc(m.qualifications)}</dd>` : ""}
             ${(m.practiceAreas || []).length ? `<dt>Practice Areas</dt><dd>${m.practiceAreas.map(esc).join("; ")}</dd>` : ""}
             <dt>Office</dt><dd><a href="tel:${esc(AIL.firm.phoneHref)}">${esc(AIL.firm.phone)}</a></dd>
@@ -305,7 +305,7 @@
     draw();
   }
   document.addEventListener("click", (e) => {
-    if (e.target.closest("[data-sample-link]")) { e.preventDefault(); toast("Sample entry — the PDF will be linked once the firm’s newsletters are uploaded."); }
+    if (e.target.closest("[data-sample-link]")) { e.preventDefault(); toast("Sample entry. The PDF will be linked once the firm’s newsletters are uploaded."); }
   });
 
   // ---- Careers openings ----
@@ -329,7 +329,7 @@
             <ul>${o.points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>
           </div>
           <a class="btn-ail" href="#apply" data-apply="${esc(o.title)}">Apply <i class="bi bi-arrow-right"></i></a>
-        </div>`).join("") : `<div class="pub-empty"><i class="bi bi-briefcase"></i><h3 class="mt-3">No open positions right now</h3><p class="text-muted mb-0">We are always happy to receive applications from outstanding candidates — use the form below.</p></div>`;
+        </div>`).join("") : `<div class="pub-empty"><i class="bi bi-briefcase"></i><h3 class="mt-3">No open positions right now</h3><p class="text-muted mb-0">We are always happy to receive applications from outstanding candidates. Please use the form below.</p></div>`;
       if (animate) gsap.fromTo($$(".job-card", el), { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: .7, stagger: .08, ease: "power3.out" });
     };
     tabs && tabs.addEventListener("click", (e) => {
@@ -371,7 +371,7 @@
     t._h = setTimeout(() => { t.style.opacity = 0; t.style.transform = "translateX(-50%) translateY(20px)"; }, 3600);
   }
 
-  // Scroll lock — reference-counted so preloader, disclaimer and menu never unlock each other.
+  // Scroll lock, reference-counted so preloader, disclaimer and menu never unlock each other.
   const locks = new Set();
   function lockScroll(key, on) {
     on ? locks.add(key) : locks.delete(key);
@@ -442,7 +442,7 @@
     $("#discReview").addEventListener("click", () => d.classList.remove("declined"));
   }
 
-  // ---- Forms (front-end only — backend to be connected later) ----
+  // ---- Forms (front-end only, backend to be connected later) ----
   function initForms() {
     $$(".file-drop input[type=file]").forEach((inp) => {
       const box = inp.closest(".file-drop");
@@ -508,7 +508,7 @@
       const msg = $("#footerSubMsg");
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) { msg.textContent = "Please enter a valid email address."; return; }
       /* BACKEND HOOK: newsletter subscription */
-      msg.textContent = "Thank you — you’re subscribed to our newsletter.";
+      msg.textContent = "Thank you, you’re subscribed to our newsletter.";
       fs.reset();
     });
   }

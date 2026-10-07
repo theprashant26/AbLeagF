@@ -829,3 +829,17 @@ img { max-width: 100%; }
 
 /* Home hero: black & white background images (client request) */
 .hero__img { filter: grayscale(100%) contrast(1.05); }
+
+/* Hero slide label ("Supreme Court of India" / "High Court of Delhi") on the right side */
+.hero__label { position: absolute; top: 150px; right: max(16px, calc((100vw - 1280px) / 2 + 12px)); margin: 0; flex-direction: row-reverse; }
+.hero__label::before { width: 44px; }
+@media (max-width: 1199.98px), (max-height: 600px) {
+  .hero__caption { max-width: none; }
+  .hero__label { position: static; display: flex; width: 100%; flex-direction: row; justify-content: flex-end; margin-bottom: 22px; }
+}
+@media (max-width: 767.98px) { .hero__label { font-size: 10.5px; letter-spacing: .22em; margin-bottom: 16px; } }
+@media (max-width: 767.98px) and (max-height: 700px) {
+  .hero__text { display: none; }
+  .hero__content { padding-top: 84px; }
+  .hero__title { margin-bottom: 18px; }
+}

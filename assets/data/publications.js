@@ -1,7 +1,7 @@
 /* =====================================================================
    PUBLICATIONS & NEWSLETTERS
    ---------------------------------------------------------------------
-   Every item here appears on publications.html (latest first — the
+   Every item here appears on publications.html (latest first, the
    page sorts by date automatically) and the latest three on the home page.
 
    type:  "newsletter" | "article" | "research" | "update"
@@ -59,9 +59,9 @@ AIL.publications = [
   },
   {
     type: "newsletter",
-    title: "Insolvency and Bankruptcy Code (Amendment) Act, 2026 — Comprehensive Analysis",
+    title: "Insolvency and Bankruptcy Code (Amendment) Act, 2026 - Comprehensive Analysis",
     date: "2026-04",
-    summary: "A detailed analysis of the IBC (Amendment) Act, 2026, enforced on 6 April 2026 — one of the most consequential developments in India's insolvency framework since the Code was enacted.",
+    summary: "A detailed analysis of the IBC (Amendment) Act, 2026, enforced on 6 April 2026, one of the most consequential developments in India's insolvency framework since the Code was enacted.",
     tags: ["Insolvency (IBC)", "Legislative Update"],
     file: "publications/newsletters/2026-04-litigation-newsletter.pdf"
   },
@@ -85,7 +85,7 @@ AIL.publications = [
     type: "newsletter",
     title: "Deepfakes Before Courts: The Legal and Evidentiary Crisis of Synthetic Media",
     date: "2026-01",
-    summary: "The legal and evidentiary challenges posed by AI-generated deepfakes — synthetic audio, video and images — and how courts may respond.",
+    summary: "The legal and evidentiary challenges posed by AI-generated deepfakes, such as synthetic audio, video and images, and how courts may respond.",
     tags: ["Technology", "Evidence", "Artificial Intelligence"],
     file: "publications/newsletters/2026-01-litigation-newsletter.pdf"
   }

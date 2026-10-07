@@ -1,5 +1,5 @@
 /* =====================================================================
-   Shared layout — header, mobile nav, footer, disclaimer, floating
+   Shared layout, header, mobile nav, footer, disclaimer, floating
    buttons and preloader are rendered here so every page stays in sync.
    ===================================================================== */
 (function () {
@@ -23,8 +23,8 @@
     </div>
     <header class="site-header" id="siteHeader">
       <div class="container-xl">
-        <a class="brand" href="index.html" aria-label="Ab Initio Legal LLP — Home">
-          <img src="assets/img/brand/logo-light.png" alt="Ab Initio Legal LLP — Advocates &amp; Solicitors" width="240" height="68">
+        <a class="brand" href="index.html" aria-label="Ab Initio Legal LLP - Home">
+          <img src="assets/img/brand/logo-light.png" alt="Ab Initio Legal LLP - Advocates &amp; Solicitors" width="240" height="68">
         </a>
         <nav aria-label="Main">
           <ul class="main-nav">
@@ -131,14 +131,14 @@
           <a href="contact.html">Connect With Us</a>
         </div>
       </nav>
-      <div class="footer-brand"><img src="assets/img/brand/logo-light.png" alt="Ab Initio Legal LLP — Advocates &amp; Solicitors" loading="lazy"></div>
+      <div class="footer-brand"><img src="assets/img/brand/logo-light.png" alt="Ab Initio Legal LLP - Advocates &amp; Solicitors" loading="lazy"></div>
       <div class="footer-bottom">
         <div class="container-xl">
           <span>© ${year} ${F.name}. All rights reserved.</span>
           <span><a href="disclaimer.html">Disclaimer</a> &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a></span>
         </div>
         <div class="container-xl mt-3">
-          <p class="footer-note mb-0">As per the rules of the Bar Council of India, law firms are not permitted to solicit work or advertise. This website is meant only to provide information about the firm and does not constitute legal advice or an invitation to create an advocate–client relationship.</p>
+          <p class="footer-note mb-0">As per the rules of the Bar Council of India, law firms are not permitted to solicit work or advertise. This website is meant only to provide information about the firm and does not constitute legal advice or an invitation to create an advocate-client relationship.</p>
         </div>
       </div>
     </footer>
@@ -153,7 +153,7 @@
     <div class="disclaimer" id="disclaimer" role="dialog" aria-modal="true" aria-labelledby="discTitle">
       <div class="disclaimer__box">
         <div class="disclaimer__head">
-          <img src="assets/img/brand/logo-dark.png" alt="Ab Initio Legal LLP — Advocates &amp; Solicitors">
+          <img src="assets/img/brand/logo-dark.png" alt="Ab Initio Legal LLP - Advocates &amp; Solicitors">
           <h2 id="discTitle">Disclaimer</h2>
           <small>As per the Rules of the Bar Council of India</small>
         </div>
@@ -161,9 +161,9 @@
           <p>The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website, <strong>${F.website}</strong>, you acknowledge and confirm that:</p>
           <ul>
             <li>You are seeking information relating to ${F.name} of your own accord. No solicitation, advertisement, personal communication, invitation or inducement of any kind has been made by Ab Initio Legal LLP or any of its partners or representatives for the purpose of soliciting work through this website.</li>
-            <li>The information on this website is provided solely for informational purposes and should not be construed as legal advice or a legal opinion. It does not create an advocate–client relationship.</li>
+            <li>The information on this website is provided solely for informational purposes and should not be construed as legal advice or a legal opinion. It does not create an advocate-client relationship.</li>
             <li>Ab Initio Legal LLP shall not be liable for any consequences arising from any action taken by you in reliance on the material or information provided on this website. You should seek independent legal advice for your specific situation.</li>
-            <li>Any information you share with us through this website will not be treated as confidential until an advocate–client relationship is formally established.</li>
+            <li>Any information you share with us through this website will not be treated as confidential until an advocate-client relationship is formally established.</li>
             <li>The contents of this website, including text, logos and graphics, are the intellectual property of Ab Initio Legal LLP.</li>
           </ul>
           <p class="mb-0">If you have any questions, please write to <a href="mailto:${F.emails[0]}">${F.emails[0]}</a>.</p>
