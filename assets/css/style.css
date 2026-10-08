@@ -843,3 +843,6 @@ img { max-width: 100%; }
   .hero__content { padding-top: 84px; }
   .hero__title { margin-bottom: 18px; }
 }
+
+/* Home slider: slide selector (01 Supreme Court / 02 Delhi High Court) hidden on client request; autoplay continues */
+.hero__dots { display: none; }
